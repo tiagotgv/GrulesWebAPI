@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Contratos.Interfaces
 {
-    public interface IEvento : IRepositoryBase<Evento>
+    public interface IEvento
     {
+        IEnumerable<Evento> ListarTodosEventos();
+        Evento ObterEventoPorId(int idEvento);
+        void SalvarEvento(Evento evento);
+        void ExcluirEvento(Evento evento);
     }
 }

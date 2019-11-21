@@ -87,10 +87,11 @@ namespace GrulesWebAPI.Controllers
                     return BadRequest("Objeto inválido");
                 }
 
-                Aluno aluno = _mapper.Map<AlunoModel, Aluno>(alunoModel);
+                Aluno aluno = _mapper.Map<Aluno>(alunoModel);
 
-                _repo.Aluno.SalvarAluno(aluno);
+                _repo.Aluno.SalvarAluno(aluno);    
                 _repo.Save();
+                _logger.LogInfo($"O aluno: {aluno.IdAluno}, foi criado/alterado.");
 
                 AlunoModel alunoCriado = _mapper.Map<AlunoModel>(aluno);
 
@@ -108,7 +109,7 @@ namespace GrulesWebAPI.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{idAluno}")]
         public IActionResult ExcluirAluno(int idAluno)
         {
             try
@@ -121,6 +122,7 @@ namespace GrulesWebAPI.Controllers
                 }
 
                 _repo.Aluno.ExcluirAluno(aluno);
+                _logger.LogInfo($"O aluno: {aluno.Nome}, foi excluido do banco.");
                 _repo.Save();
 
                 return NoContent();

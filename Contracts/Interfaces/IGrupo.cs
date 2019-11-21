@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Contratos.Interfaces
 {
-    public interface IGrupo : IRepositoryBase<Grupo>
+    public interface IGrupo
     {
+        IEnumerable<Grupo> ListarTodosGrupos();
+        Grupo ObterGrupoPorId(int idGrupo);
+        void SalvarGrupo(Grupo grupo);
+        void ExcluirGrupo(Grupo grupo);
     }
 }

@@ -15,12 +15,13 @@ namespace Repository.Services
 
         public IEnumerable<Aluno> ListarTodosAlunos()
         {
-            return FindAll().Include(x => x.Grupo).OrderBy(x => x.Nome).ToList();
+            return FindAll().Include(x => x.Grupo).DefaultIfEmpty()
+                .OrderBy(x => x.Nome).ToList();
         }
         public Aluno ObterAlunoPorId(int idAluno)
         {
             return FindByCondition(x => x.IdAluno.Equals(idAluno))
-                .Include(x => x.Grupo)
+                .Include(x => x.Grupo).DefaultIfEmpty()
                 .FirstOrDefault();
         } 
 

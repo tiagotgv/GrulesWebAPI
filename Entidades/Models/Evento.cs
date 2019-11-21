@@ -24,5 +24,8 @@ namespace Entidades.Models
 
         [Required(ErrorMessage = "Data e hora do término são obrigatórios")]
         public DateTime DataTermino { get; set; }
+        
+        [ForeignKey(nameof(Grupo.IdGrupo))]
+        public List<Grupo> Grupos { get; set; }
     }
 }

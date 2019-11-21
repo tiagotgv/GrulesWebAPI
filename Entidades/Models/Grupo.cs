@@ -24,6 +24,9 @@ namespace Entidades.Models
         [ForeignKey(nameof(Evento))]
         public int IdEvento { get; set; }
         public Evento Evento { get; set; }
+        
+        [ForeignKey(nameof(Aluno.IdAluno))]
+        public List<Aluno> Alunos { get; set; }
 
     }
 }

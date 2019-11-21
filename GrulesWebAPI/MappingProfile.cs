@@ -13,7 +13,13 @@ namespace GrulesWebAPI
         public MappingProfile()
         {
             CreateMap<Aluno, AlunoModel>();
+            CreateMap<AlunoModel, Aluno>();
+
             CreateMap<Grupo, GrupoModel>();
+            CreateMap<GrupoModel, Grupo>();
+
+            CreateMap<EventoModel, Evento>();
+            CreateMap<Evento, EventoModel>();
         }
     }
 }
