@@ -19,3 +19,8 @@ Por que usar ASP.NET Core ?
 * Componentes modulares com sobrecarga mínima mantêm a flexibilidade ao construir suas soluções
 
 -------------------
+
+Pré-requisitos
+--------
+
+Este exemplo supõe que você já tenha um aplicativo ASP.NET Core em sua máquina. Se você é novo no ASP.NET, pode seguir um tutorial simples para inicializar um projeto ou clona [repositorio](https://github.com/tiagotgv/GrulesWebAPI)
