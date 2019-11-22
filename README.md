@@ -17,3 +17,5 @@ Por que usar ASP.NET Core ?
 * Projetado para fornecer uma estrutura de desenvolvimento otimizada para aplicativos implantados na nuvem ou executados no local
 
 * Componentes modulares com sobrecarga mínima mantêm a flexibilidade ao construir suas soluções
+
+-------------------
